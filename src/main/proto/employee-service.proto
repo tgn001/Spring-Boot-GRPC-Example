@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "constants/util.proto";
+
+option java_multiple_files = true;
+option java_package = "com.techgeeknext.employee";
+
+message EmployeeRequest{
+  string emp_id = 1;
+}
+message EmployeeResponse {
+  string emp_id = 1;
+  string name = 2;
+  constants.Role role = 3;
+}
+
+service EmployeeService {
+  rpc getEmployee(EmployeeRequest) returns (EmployeeResponse) {};
+}

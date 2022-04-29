@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package constants;
+
+option java_multiple_files = true;
+option java_package = "com.techgeeknext.constants";
+
+enum Role {
+  //default role
+  USER = 0;
+  HR = 1;
+  MANAGER = 2;
+  ADMIN = 3;
+}
